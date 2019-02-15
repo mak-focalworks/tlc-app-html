@@ -1,0 +1,19 @@
+<html>
+<body>
+</body>
+<script>
+	function getUrlParameter(name) {
+			name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+			var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+			var results = regex.exec(location.search);
+			return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+		};
+
+	window.onload = function(){
+		var server_id = getUrlParameter('server_id');
+		var client_id = getUrlParameter('client_id');
+		var location = `app://tlc/profile/${client_id}/${server_id}`;
+		location.href = location;
+	}
+</script>
+</html>
