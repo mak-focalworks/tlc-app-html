@@ -10,6 +10,7 @@
 		};
 
 	window.onload = function(){
+		console.log('onload');
 		var server_id = getUrlParameter('server_id');
 		var client_id = getUrlParameter('client_id');
 		var location = `app://tlc/profile/${client_id}/${server_id}`;
